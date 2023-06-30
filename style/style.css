@@ -1,0 +1,306 @@
+html {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #141820;
+}
+
+a, h1, p, li, h1, h2, h3{
+  text-decoration: none;
+  color: #f1f1f1; 
+  list-style-type: none; 
+}
+
+input:not(:placeholder-shown) {
+    border-color: green;
+  }
+
+  textarea:not(:placeholder-shown) {
+    border-color: green;
+  }
+  
+  
+
+h2 {
+    font-size: 1rem;
+}
+
+li {
+    margin-right: 20px;
+}
+
+nav{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navbarRight{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-bottom: 100px;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.circle:hover{
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce-5;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce-5 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-100px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    57%  { transform: scale(1,1)    translateY(-7px); }
+    64%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.right {
+    margin-top: 100px;
+    width: 40%;
+    text-align: left;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-right: 200px;
+    margin-left: 200px; */
+    margin-top: 300px;
+}
+
+.Skill {
+    background-color: #2b3343;
+    width: 40%;
+    height: 600px;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.Skill > .title{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+.collumn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 80%;
+    padding: 5px;
+}
+
+.collumn {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: scroll;
+}
+.collumn::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+
+.card{
+    color: white;
+    background-color: #4c5a75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px 50px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+
+.cardItem{
+
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.expBar{
+    text-align: center;
+}
+
+.form {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+form{
+    width: 550px;
+}
+
+.fullName {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.message{
+    width: 99.5%;
+}
+
+.progress {
+    color: #000!important;
+}
+.progressBlue {
+    color: #fff!important;
+    background-color: #2196F3!important;
+    padding: 0.01em 16px;
+    border-radius: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+
+@media only screen and (max-width: 1025px) {
+
+    .aboutMe{
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .left{
+        margin: 0 auto;
+    }
+
+    .right{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Skill{
+        margin: 0 auto;
+    }
+
+    .skills{
+        flex-direction: row; 
+        gap: 50px;
+        justify-content: center;
+    }
+
+    html{
+        margin: 0 auto;
+        padding: 0px;
+    }
+    
+
+
+  }
+
+
+  @media only screen and (max-width: 570px) {
+
+    body{
+        margin: 0px;
+    }
+
+    .fullName{
+        flex-direction: column;
+    }
+
+    .right{
+        width: 90%;
+    }
+
+    .skills{
+        flex-direction: column!important;
+    }
+
+    .Skill {
+        background-color: #2b3343;
+        width: 85%;
+        height: 600px;
+        border-radius: 10%;
+        overflow: hidden;
+    }
+
+    .form {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    
+    form{
+        width: 350px;
+    }
+
+    .firstName{
+        margin-top: 10px;
+    }
+
+    input{
+        width: 98%;
+    }
+
+    .lastName{
+        margin-top: 10px;
+    }
+
+    .email {
+        margin-top: 10px;
+    }
+
+    .progressBlue{
+        width: 70%!important;
+    }
+
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .circle{
+        width: 60%;
+        height: 60%;
+        margin-left: 20%;
+    }
+
+    .skills{
+        flex-direction: row;
+    }
+
+
+
+  }
